@@ -15,8 +15,7 @@ static u32 g_clip_y = 0;
 static u32 g_clip_width = 0;
 static u32 g_clip_height = 0;
 
-// Software backbuffers used when we can't allocate a contiguous physical surface via PMM.
-// This keeps double-buffering enabled even on higher display resolutions.
+// this keeps double buffering enabled even on higher display resolutions
 #define VGA_SOFTWARE_BUFFER_MAX_BYTES (40u * 1024u * 1024u)
 static u8 g_drawbuffer_fallback[VGA_SOFTWARE_BUFFER_MAX_BYTES];
 static u8 g_presentbuffer_fallback[VGA_SOFTWARE_BUFFER_MAX_BYTES];
